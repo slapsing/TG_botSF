@@ -57,7 +57,7 @@ def convert(message: telebot.types.Message):
 
     else:
         num = Decimal(total_base) * Decimal(amount)
-        rounded_amount = num.quantize(Decimal('0.000'))
+        rounded_amount = num.quantize(Decimal('0.0000000'))
         text = f'Цена {amount} {quote} в {base} - {rounded_amount}'
         bot.send_message(message.chat.id, text)
 
